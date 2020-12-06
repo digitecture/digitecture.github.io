@@ -1,214 +1,213 @@
 /*
-
-Theme:      Roam Aquae Theme
-Edits by:   Originally by Cal Robert Lee (https://www.calrobert.com/) adapted by Tyrone Marshall
-Colors by:  Originally by Cal Robert Lee adapted by Tyrone Marshall
-Version:    v2.1.5
-
-Quickfix:   - Added embed block bg color
-
-Updates:    - Added centered search popup using code from Azlen Elza's Zenith theme — code starts around line 1174
-            - Edited colors for almost all elements
-            - Removed topbar
-            - Cleaned up spacing in right sidebar
-            - Cleaned up spacing in left bar
-            - Changed loading animation and page load animation
-            - and more
-
-Notes:      - Thanks to the supportive people on r/RoamResearch
-            - Started learning programming and CSS last month so please excuse if it's a bit messy
-            - Super excited to have been selected to be on RoamResearch's Official theme's page!
-            - For easy installation, create a page titled roam/css in RoamResearch and copy this code in
-
+Theme:      Roam Zenith Aquae Theme Inline
+Version:    3.5
+Edits by:   Cal Robert Lee (https://www.calrobert.com/) adapted by Tyrone Marshall
+Colors by:  Tyrone Marshall
+Notes: Allows Catominor Color Blocks to Work!
 */
 
 :root {
+      /* Zenith Page Settings */
+    --page-shadow: 0px 8px 14px rgba(0, 0, 0, 0.05);    
+    --color-primary-contrast: #FFFFFF;
+    --color-primary: #B5C2CE42;
+    --icon-color: #5c7080;
+    --bullet-color: rgba(0, 0, 0, 0.2); 
+  
   /* PRIMARY FONTS */
-  --main-font: 'Inter', 'Inter';
-  --main-font-color: #282828;
-  --main-font-size: 1.0em;
+    --main-font: 'Inter', sans-serif;
+    --main-font-color: #010203;
+    --main-font-size: 12ox;
 
   /* FONT COLORS */
+    --page-link-color: #004E98;
+    --page-bracket-color: #bfbfbf;
+    --external-link-color: #004E98;
+    --daily-notes-link-color: none;
+    --sidebar-link-color: none;
+    --h1-font-color: #010203;
+    --h2-font-color: none;
+    --h3-font-color: #7A7D7D;
+    --strong: #282828;
+    --emphasis: #282828;
+    --highlight-font-color: #282828;
+    --highlight-background-color: #FFF7C4;
+    --highlight-link-color: #9A031E;
+    --highlight-padding: 5px 5px 4px 5px;
+    --reference-header-color: #010203;
+    --sidebar-font-color: #7A7D7D;
+    --sidebar-font-color-hover: #969696;
+    --sidebar-hover-bg: none;
+    --sidebar-font-hover-color: #f5f8fa;
+    --sidebar-shorcut-color: #545454;
 
-  --page-link-color: #0073f9;
-  --page-bracket-color: #bfbfbf;
-  --external-link-color: #0073f9;
-  --daily-notes-link-color: none;
-  --sidebar-link-color: none;
-  --h1-font-color: #202b33;
-  --h2-font-color: none;
-  --h3-font-color: #75b5ff;
-  --strong: #282828;
-  --emphasis: #282828;
-  --highlight-font-color: #282828;
-  --highlight-background-color: #fff1a4;
-  --highlight-link-color: #0073f9;
-  --highlight-padding: 5px 5px 4px 5px;
-  --reference-header-color: #d6eaff;
-  --sidebar-font-color: #717171;
-  --sidebar-font-color-hover: #969696;
-  --sidebar-hover-bg: none;
-  --sidebar-font-hover-color: #f5f8fa;
-  --sidebar-shorcut-color: #545454;
+    /* Tags */
+    --tag-font-color: #FFFFFF;
+    /*--tag-font-color: #010203;*/
+    --tag-bg-color: #004E98;
+    /*--tag-bg-color: #f9f9f9cf;*/
+    --tag-border-radius: 15px;
+    /*--tag-border: 1px solid #B0B0B0;*/
+    --tag-padding: 1px 5px 2px;
+    --tagHover-font-color: #010203;
+    --tagHover-bg-color: #FFFFFF;
+    --tagHover-border: 1px solid #010203;
 
-  --tag-font-color: #bebebe;
-  --tag-bg-color: #f9f9f9cf;
-  --tag-border-radius: 10px;
-  --tag-border: 1px solid #e6e6e682;
-  --tag-padding: 1px 5px 2px;
-  --tagHover-font-color: #b8b8b8;
-  --tagHover-bg-color: #e8e8e8;
-  --tagHover-border: 1px solid #dddddd82;
+    /* Bullets */
+    --bullet-color: #004E98;
+    --bullet-closed: #B5C2CE42;
+    --bullet-closed-border-color: #004E98;
+    --tree-vertline: 2px solid hsl(0, 0%, 96%);
+    --bullet-position: ; /* UPDATE*/
 
-  --bullet-color: #0069e3;
-  --bullet-closed: #bcdbffb5;
-  --tree-vertline: 2px solid hsl(0, 0%, 96%);
-  --bullet-position: ; /* UPDATE*/
+    /* Checkmarks */
+    --checkmark-top: -1px;
+    --checkmark-left: -2px;
+    --checkmarl-height: 14px;
+    --checkmark-width: 14px;
+    --checkmark-border-radius: 4px;
+    --checkmark-color: 1px solid #ffffff;
+    --checkmark-border: 1px solid hsl(0, 0%, 84%);
+    --checkmark-bg-color: #ffffff;
+    --checkedmark-border: 1px solid #ffffff0f;
+    --checkedmark-bg-color: #004E98;
 
-  --checkmark-top: -1px;
-  --checkmark-left: -2px;
-  --checkmarl-height: 14px;
-  --checkmark-width: 14px;
-  --checkmark-border-radius: 4px;
-  --checkmark-color: 1px solid #ffffff;
-  --checkmark-border: 1px solid hsl(0, 0%, 84%);
-  --checkmark-bg-color: #ffffff;
-  --checkedmark-border: 1px solid #ffffff0f;
-  --checkedmark-bg-color: #3c96ff;
+    /* Code Block */
+    --code-bg: #f1f6fb;
+    --code-font: 'Source Code Pro', 'Courier New', Courier, monospace;
+    --code-font-color: #333333;
+    --code-font-size: 1.0em;
+    --code-border: 1px solid #d5d8db;
+  
+    --codemirror-bg: hsl(210, 53%, 98%);
+    --codemirror-border-color: #dadde1;
+    --codemirror-border-radius: 3px;
+    --codemirror-linenumber: #aaaeb5;
+    --code-matchingbracket-color: #f90;
 
-  --code-bg: #f1f6fb;
-  --code-font: 'Source Code Pro', 'Courier New', Courier, monospace;
-  --code-font-color: #333333;
-  --code-font-size: 1.0em;
-  --code-border: 1px solid #d5d8db;
+   /* colors from corwsonkb's one-light-kat syntax */
+    --cm-comment: hsl(230, 0%, 44%);
+    --cm-def: hsl(41, 99%, 40%);
+    --cm-keyword: hsl(301, 66%, 43%);
+    --cm-callee: hsl(177, 72%, 47%);
+    --cm-operator: hsl(177, 72%, 47%);
+    --cm-builtin: hsl(177, 72%, 47%);
+    --cm-string: hsl(119, 37%, 50%);
+    --cm-variable-3: hsl(177, 72%, 47%);
+    --cm-variable-2: hsl(  5, 74%, 59%);
+    --cm-variable: hsl(53, 99%, 40%);
+    --cm-tag: hsl(  5, 74%, 59%);
+    --cm-property: hsl(221, 87%, 60%);
+    --cm-number: hsl(41, 94%, 48%);
+    --cm-atom: hsl(41, 94%, 48%);
+    --cm-qualifier: hsl(41, 94%, 48%);
+  
+    --new-page-color: none;
+  
+    --ref-count-font-size: 12px;
 
-  --codemirror-bg: hsl(210, 53%, 98%);
-  --codemirror-border-color: #dadde1;
-  --codemirror-border-radius: 3px;
-  --codemirror-linenumber: #aaaeb5;
-  --code-matchingbracket-color: #f90;
+    /* BACKGROUNDS & OUTLINES */
+    --body-bg: #ffffff;
+    --topbar-bg: none;
+    --topbar-border-bottom: none;
+    --left-sidebar-bg: #010203;
+    --left-sidebar-border-right: none;
+    --left-sidebar-divider-color: none;
+    --right-sidebar-bg: #ffffff;
+    --right-sidebar-border-left: 1px solid hsl(220, 9%, 93%); /* changed to 1px */
+    --divider-color: #cfcfcf;
+    --allpage-bottom-border-color: #ececec;
+    --reference-item-bg: #fdfdfd;
+    --reference-item-border-radius: 6px;
+    --reference-item-border: 1px solid #e6e6e68a;
+  
+    --block-highlight: #d8ecff;
+    --block-highlight-bg: #d3ffa4;
+  
+    --popover-bg: #ffffff;
+    --popover-font-color: #282828;
+    --popover-border: 0.5px solid red; /* #UPDATE */
+  
+    --inline-search-bg: #ffffff;
+    --inline-search-border-radius: 6px;
+    --inline-search-border: 1px solid #d1d1d1;
+    --inline-search-button-bg-color: #ffffff;
+  
+    --datepicker-bg: var(--inline-search-bg);
+    --datepicker-day-wrapper: none;
+    --datepicker-altfont-color: #dadde0; /* #UPDATE */
+  
+    --search-font-color: #282828;
+    --search-body-font-color: #e8e8e8;
+    --search-outline: hsl(212, 100%, 62%);
+    --search-bg: #ffffff;
+    --search-border-radius: 4px;
+    --search-selected-row: #d5dadf;
+  
+    --block-ref-bg: none;
+    --block-ref-hover: none;
+    --block-ref-hover-bg: #f6f9fb;
+    --block-ref-border-bottom: #d2dae3;
+  
+    --pages-row-highlight: ; /* NEEDS LOVE */
+    --pages-header-row: #ffffff;
+    --pages-mentions-level-bg: #3c96ff;
+    --pages-mentions-level1-bg: #3d71ff;
+    --pages-mentions-level2-bg: #3c50ff;
+    --pages-mentions-font-color: #282828;
+  
+    --icon-color: #5c636b;
+    --icon-bg-hover: #ebebeb;
+    --icon-color-hover: #5c636b;
+    --minirightbar-icon-color: #cfcfcf;
+    --pin-color: #EE6F2D;
+  
 
-  /* colors from corwsonkb's one-light-kat syntax */
-  --cm-comment: hsl(230, 0%, 44%);
-  --cm-def: hsl(41, 99%, 40%);
-  --cm-keyword: hsl(301, 66%, 43%);
-  --cm-callee: hsl(177, 72%, 47%);
-  --cm-operator: hsl(177, 72%, 47%);
-  --cm-builtin: hsl(177, 72%, 47%);
-  --cm-string: hsl(119, 37%, 50%);
-  --cm-variable-3: hsl(177, 72%, 47%);
-  --cm-variable-2: hsl(  5, 74%, 59%);
-  --cm-variable: hsl(53, 99%, 40%);
-  --cm-tag: hsl(  5, 74%, 59%);
-  --cm-property: hsl(221, 87%, 60%);
-  --cm-number: hsl(41, 94%, 48%);
-  --cm-atom: hsl(41, 94%, 48%);
-  --cm-qualifier: hsl(41, 94%, 48%);
-
-  --new-page-color: none;
-
-  --ref-count-font-size: 12px;
-
-  /* BACKGROUNDS & OUTLINES */
-
-  --body-bg: #ffffff;
-  --topbar-bg: none;
-  --topbar-border-bottom: none;
-  --left-sidebar-bg: #2e3234;
-  --left-sidebar-border-right: none;
-  --left-sidebar-divider-color: none;
-  --right-sidebar-bg: #ffffff;
-  --right-sidebar-border-left: 1px solid hsl(220, 9%, 93%); /* changed to 1px */
-  --divider-color: #cfcfcf;
-  --allpage-bottom-border-color: #ececec;
-  --reference-item-bg: #fdfdfd;
-  --reference-item-border-radius: 6px;
-  --reference-item-border: 1px solid #e6e6e68a;
-
-  --block-highlight: #d8ecff;
-  --block-highlight-bg: #d3ffa4;
-
-  --popover-bg: #ffffff;
-  --popover-font-color: #282828;
-  --popover-border: 0.5px solid red; /* #UPDATE */
-
-  --inline-search-bg: #ffffff;
-  --inline-search-border-radius: 6px;
-  --inline-search-border: 1px solid #d1d1d1;
-  --inline-search-button-bg-color: #ffffff;
-
-  --datepicker-bg: var(--inline-search-bg);
-  --datepicker-day-wrapper: none;
-  --datepicker-altfont-color: #dadde0; /* #UPDATE */
-
-  --search-font-color: #282828;
-  --search-body-font-color: #e8e8e8;
-  --search-outline: hsl(212, 100%, 62%);
-  --search-bg: #ffffff;
-  --search-border-radius: 4px;
-  --search-selected-row: #f5f5f5;
-
-  --block-ref-bg: none;
-  --block-ref-hover: none;
-  --block-ref-hover-bg: #f6f9fb;
-  --block-ref-border-bottom: #d2dae3;
-
-  --pages-row-highlight: ; /* NEEDS LOVE */
-  --pages-header-row: #ffffff;
-  --pages-mentions-level-bg: #3c96ff;
-  --pages-mentions-level1-bg: #3d71ff;
-  --pages-mentions-level2-bg: #3c50ff;
-  --pages-mentions-font-color: #ffffff;
-
-  --icon-color: #5c636b;
-  --icon-bg-hover: #ebebeb;
-  --icon-color-hover: #5c636b;
-  --minirightbar-icon-color: #cfcfcf;
-
-  /* Misc */
-  --kanban-board-bg: #fafcfd;
-  --kanban-board-border: 1px solid #e6e6e6;
-  --kanban-board-border-radius: 10px;
-
-  --kanban-column-bg: #ecececdb;
-  --kanban-column-font-color: var(--main-font-color);
-  --kanban-column-margin: 4px 8px 0px 4px;
-
-  --kanban-card-bg: #ffffff;
-  --kanban-card-font-color: var(--main-font-color);
-  --kanban-card-border-radius: 4px;
-  --kanban-card-border: 1px solid #dbdbdb;
-
-  --table-border: 1px solid #cacaca;
-
-  --embed-container-bg: #ecf2f8;
-
-  --astrolabe-bg-color: #f2f2f2;
-
-  --hr-color: #ccc;
-
-  --blockquote-font-color: #111111;
-  --blockquote-border-color: #07f;
-  --blockquote-bg: #ffffff;
-  --blockquote-cite: #000000;
-
-  --encrypted-font-color: #0077ffc4;
-  --encrypted-bg: hsl(212, 39%, 98%);
-  --encrypted-font-size: 13px;
-  --encrypted-font-weight: 300;
-  --encrypted-border-radius: 4px;
-  --encrypted-padding: 2px 4px;
-
-  --emoji-bg: #f0f7fd;
-  --emoji-border: 0px solid none;
-  --emoji-color: none;
-
-  --query-results-border: none;
-  --query-border: 1px solid #f8f1d2;
-  --query-border-radius: 6px;
-  --query-padding-bottom: 16px;
-  --query-title-font-color: #d0b944;
-  --query-title-bg: #fffced;
+    /* MISC */
+    --kanban-board-bg: #fafcfd;
+    --kanban-board-border: 1px solid #e6e6e6;
+    --kanban-board-border-radius: 10px;
+    --kanban-column-bg: #ecececdb;
+    --kanban-column-font-color: var(--main-font-color);
+    --kanban-column-margin: 4px 8px 0px 4px;
+    --kanban-card-bg: #ffffff;
+    --kanban-card-font-color: var(--main-font-color);
+    --kanban-card-border-radius: 4px;
+    --kanban-card-border: 1px solid #dbdbdb;
+  
+    --table-border: 1px solid #cacaca;
+  
+    --embed-container-bg: #ecf2f8;
+  
+    --astrolabe-bg-color: #f2f2f2;
+  
+    --hr-color: #ccc;
+  
+    --blockquote-font-color: #111111;
+    --blockquote-border-color: #07f;
+    --blockquote-bg: #ffffff;
+    --blockquote-cite: #000000;
+  
+    --encrypted-font-color: #0077ffc4;
+    --encrypted-bg: hsl(212, 39%, 98%);
+    --encrypted-font-size: 13px;
+    --encrypted-font-weight: 300;
+    --encrypted-border-radius: 4px;
+    --encrypted-padding: 2px 4px;
+      
+    --select-bg-color: #ffffff;
+    --select-border-color: #d5d5d5;
+              
+    --emoji-bg: #f0f7fd;
+    --emoji-border: 0px solid none;
+    --emoji-color: none;
+  
+    --query-results-border: none;
+    --query-border: 1px solid #f8f1d2;
+    --query-border-radius: 6px;
+    --query-padding-bottom: 16px;
+    --query-title-font-color: #d0b944;
+    --query-title-bg: #fffced;
 
 
   /* Scrollbar settings - to disable set values to none */
@@ -242,13 +241,13 @@ Notes:      - Thanks to the supportive people on r/RoamResearch
 }
 
 /* !!!!! Un-comment the section below to maximize page width, line length, and images widths (grabbed from Jeff Harris's Railcast theme)  —— Just know it creates display issues in the graph! */
-/*
+
 .roam-block-container {
   max-width: 100% !important;
 }
 div.roam-center > div:first-child {
-    padding-right: calc((100% - 950px) / 2) !important;
-    padding-left: calc((100% - 950px) / 2) !important;
+    padding-right: calc((100% - 900px) / 2) !important;
+    padding-left: calc((100% - 900px) / 2) !important;
 }
 .hoverparent[style^='position: relative; width: 500px;'] {
     width: 100% !important;
@@ -264,8 +263,6 @@ div.roam-center > div:first-child {
 .hoverparent[style^="position: relative; width: 720px;"] {
   width: 100% !important;
 }
-*/
-
 /*                     END OF CONTENT PADDING & WIDTH                          */
 /* --------------------------------------------------------------------------- */
 
@@ -284,7 +281,7 @@ div.roam-center > div:first-child {
 }
 /* H2 */
 .rm-level2 {
-  /* font-family: 'Inter', sans-serif !important; */
+  /* font-family: 'Iter', sans-serif !important; */
   font-weight: 400;
   font-size: 1.3em;
   font-family: var(--main-font);
@@ -305,7 +302,7 @@ div.roam-center > div:first-child {
 .roam-app em {
   color: var(--emphasis);
 }
-
+  
 /* -------------------------- */
 /*           #LINKS           */
 /* -------------------------- */
@@ -314,6 +311,12 @@ div.roam-center > div:first-child {
 .rm-page-ref-link-color {
     color: var(--page-link-color);
 }
+
+/* Checkmark Shape from Box to Rounded */
+.checkmark {
+  border-radius: 50% !important;
+}
+
 /* internal link hover state */
 .rm-page-ref-link-color:focus,
 .rm-page-ref-link-color:hover {
@@ -340,8 +343,7 @@ div.roam-center > div:first-child {
   color: var(--external-link-color);
   text-decoration: underline; /* EXPERIMENTING WITH HOVER STATE */
 }
-
-
+  
 /* -------------------------- */
 /*        #REFERENCES         */
 /* -------------------------- */
@@ -374,7 +376,7 @@ div.roam-center > div:first-child {
 /* adds padding to left sidebar contents */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content > div:nth-child(2) {
     padding-top: 10px;
-}
+  }
 /* edits top left main 3 buttons */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button {
   font-weight: 500;
@@ -382,6 +384,7 @@ div.roam-center > div:first-child {
   padding: 6px 20px;
   color: var(--sidebar-font-color);
   cursor:default; /* TRYING NO HOVER STATE */
+
 }
 /* edits top left main 3 buttons — HOVER STATE */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .log-button:hover {
@@ -414,14 +417,12 @@ span.bp3-icon-small.bp3-icon-star {
   color: var(--sidebar-font-color);
   padding: 4px 0px 8px 0px;
   cursor:default; /* TRYING NO HOVER STATE */
-
-}
+}  
 /* edits apperance of starred pages — HOVER STATE */
 .roam-body .roam-app .roam-sidebar-container .roam-sidebar-content .starred-pages-wrapper .starred-pages .page:hover {
   background-color: #0000;
   color: var(--sidebar-font-color-hover);
   cursor:default; /* TRYING NO HOVER STATE */
-
 }
 
 /* ---------------------------*/
@@ -433,37 +434,7 @@ span.bp3-icon-small.bp3-icon-star {
     background-color: var(--right-sidebar-bg) !important;
     border-left: var(--right-sidebar-border-left);
 }
-#right-sidebar {
-    padding-right: 55px;
-}
-/* sidebar spacing */
-#roam-right-sidebar-content {
-    margin-top: -50px;
-    padding: 40px 0px 0px 30px;
-}
-/* hides close sidebard button */
-#right-sidebar > div:nth-child(1)  {
-    visibility: hidden;
-}
-/* right sidebar divider padding and margin */
-#roam-right-sidebar-content > * {
-    margin: 0px 0px 0 20px !important;
-    padding: 15px 0px 10px 0px;
-}
-/* right sidebar divider apperance */
-#roam-right-sidebar-content [style*="border-bottom: 1px solid rgb(138, 155, 168);"] {
-    border-bottom: 1px solid var(--divider-color) !important;
-}
-/* header for sidebar page OPENED — moves it left 35px */
-#roam-right-sidebar-content .flex-h-box .bp3-button.bp3-minimal.bp3-icon-minus.bp3-small {
-    margin-left: -35px;
-    margin-right: 10px;
-}
-/* header for sidebar page COLLAPSED — moves it right */
-#roam-right-sidebar-content .flex-h-box .bp3-button.bp3-minimal.bp3-icon-plus.bp3-small {
-    margin-left: -35px;
-    margin-right: 20px;
-}
+
 
 /* ------------------------------- */
 /*    #TEXT & BLOCK #HIGHLIGHTS    */
@@ -522,22 +493,52 @@ span.bp3-icon-small.bp3-icon-star {
 /* ------------------------*/
 
 /* BULLET */
-.controls .simple-bullet-outer .simple-bullet-inner {
-  border-radius: 50%;
-  width: 5px;
-  height: 5px;
-  background-color: var(--bullet-color);
+.controls {
+    flex: 0 0 36px;
+    padding-top: 4px;
+    padding-left: 0px;
+    margin-right: 5px;
 }
 /* COLLAPSED BULLET */
-.roam-bullet-closed {
+.rm-bullet-closed, #right-sidebar .roam-bullet-closed {
   background-color: var(--bullet-closed);
   width: 16px;
-  border: 1px solid #0069e345;
+  border: 1px solid var(--bullet-closed-border-color);
 }
 /* RIGHT SIDEBAR COLLAPSED BULLET */
-#right-sidebar .roam-bullet-closed {
+#right-sidebar .rm-bullet-closed {
   background-color: var(--bullet-closed);
 }
+
+span.bp3-icon-standard {
+    font-size: 16px;
+    line-height: 1;
+    margin-left: 0px;
+    padding-top: 2px;
+}
+
+}
+#right-sidebar .rm-bullet-closed, .rm-reference-item .rm-bullet-closed{
+    background-color: var(--bullet-closed);
+}
+.controls .simple-bullet-outer {
+    height: 16px; /*was 20*/
+    width: 16px;/*was 20*/
+    margin-top: 2px;/*was -1*/
+}
+.controls .simple-bullet-outer .simple-bullet-inner {
+    background-color: var(--bullet-color);
+    width: 8px;
+    height: 8px;
+}
+/* Align vertical lines and remove nothces */
+.block-border-left {
+    margin-left: 5px;
+    border-radius: 0;
+    padding-left: 8px;
+    padding-bottom: 0px; /*was 5*/
+}
+
 /* TREE LINE */
 .block-border-left {
   border-left: var(--tree-vertline);
@@ -581,13 +582,14 @@ span.bp3-icon-small.bp3-icon-star {
   -ms-transform: rotate(45deg);
   transform: rotate(40deg) scale(0.8);
 }
-
-/* ------------------------*/
+  
+ /* ------------------------*/
 /*        #DATEPICKER      */
 /* ------------------------*/
 
 .bp3-icon-calendar {
-  background: var(--tag-bg-color) !important;
+  /* July Update Changed Calendar Background*/
+  /*background: var(--tag-bg-color) !important;*/
   border: none;
 }
 /* modal padding */
@@ -742,8 +744,9 @@ span.cm-atom {
 span.cm-qualifier {
   color: var(--cm-qualifier) !important;
 }
-
-/* ---------------------------*/
+  
+  
+  /* ---------------------------*/
 /*      #MAIN DIV ELEMENTS    */
 /* ---------------------------*/
 
@@ -911,14 +914,13 @@ body {
     color: var(--main-font-color);
 }
 
-/*
 .rm-pages-row {
   display: flex;
   flex: 0 0 auto;
   justify-content: space-between;
   align-items: flex-start;
 }
-*/
+
 .rm-pages-row:first-child { /* styles color of all pages header */
   background-color: var(--pages-header-row) !important;
 }
@@ -1061,7 +1063,6 @@ body {
   }
 }
 
-
 /*--- hides original ---*/
 .loading-astrolabe img,
 .loading-astrolabe svg {
@@ -1124,10 +1125,10 @@ body {
 /*         #OTHER          */
 /* ------------------------*/
 
-#roam-sidebar-logo img,
-#roam-sidebar-logo span { /* more subtle logo */
-  opacity: 0.0;
-}
+ #roam-sidebar-logo img,
+/* #roam-sidebar-logo span { /* more subtle logo */
+  opacity: 0.2;
+} 
 
 hr { /*DONE*/
     margin-top: 20px;
@@ -1176,79 +1177,276 @@ blockquote .small, blockquote footer, blockquote small {
   padding:  var(--s1);
 }
 
-
-/* ------------------------*/
-/*         HOTFIXES        */
-/* ------------------------*/
-
-.bp3-popover-content .flex-h-box strong{
-  color: #DCDEDD !important;
+/* BUTTON */
+.block-bullet-view .bp3-button:not([class*="bp3-icon"]) {
+    background: transparent !important;
+    /*color: rgb(var(--color-primary)) !important;*/
+    padding: 4px 14px;
+    line-height: 2em;
+    font-weight: 600;
+    border-radius: 2em !important;
+    border: 2px solid;
+    /*border: #010203;*/
+    /*border: 2px solid rgba(var(--color-primary), 0.5) !important;*/
+    box-shadow: none !important;
+}
+.block-bullet-view .bp3-button:hover { 
+    background: rgba(var(--color-primary), 0.5) !important;
 }
 
-.roam-body-main.flex-h-box[style*="height: calc(100% - 45px);"] {
-  height: calc(100% + 45px) !important;
+/* Links */
+/* -------------------------- */
+/*           #LINKS           */
+/* -------------------------- */
+
+/* INTERNAL PAGE LINK color */
+.rm-page-ref-link-color {
+    color: var(--page-link-color);
+    font-weight: bold;
+}
+
+/* internal link hover state */
+.rm-page-ref-link-color:focus,
+.rm-page-ref-link-color:hover {
+    color: var(--page-link-color);
+    text-decoration: none; /* EXPERIMENTING WITH HOVER STATE */
+}
+/* BRACKETS COLOR */
+.rm-page-ref-brackets {
+    color: var(--page-bracket-color);
+}
+/* EXTERNAL LINK color */
+.roam-app a {
+    color: var(--external-link-color);
+    text-decoration: none; /* EXPERIMENTING WITH HOVER STATE */
+}
+/* EXTERNAL LINK color — HOVER STATE */
+.roam-app a:focus,
+.roam-app a:hover {
+  color: var(--external-link-color);
+}
+
+ /* TRYING TO ISOLATE URLs and NOT PAGE HEADERS */
+.roam-app a:hover[style*="font-size: 14px;"] {
+  color: var(--external-link-color);
+  text-decoration: underline; /* EXPERIMENTING WITH HOVER STATE */
 }
 
 
-/* --------------------------------------------------------------------------------*/
-/*     CODE BELOW FROM AZLEN ELZA's ZENITH THEME — ADDS CENTERED SEARCH            */
-/*     MINOR EDITS BY CAL ROBERT LEE (VISUAL, KERNING, and POSITION EDITS)         */
-/* --------------------------------------------------------------------------------*/
+/* Block Bullet */
+.block-bullet-view .bp3-button:hover {
+    background: rgba(var(--color-primary), 0.2) !important;
+.bp3-button.bp3-minimal:hover {
+    background: rgba(var(--color-primary), 0.4) !important;
+    color: var(--text-color) !important;
+}
+.bp3-button.bp3-minimal::before, .bp3-button.bp3-minimal *, .bp3-button.bp3-minimal *::before {
+    color: var(--icon-color) !important;
+}
+.bp3-button.bp3-minimal:hover::before, .bp3-button.bp3-minimal:hover *, .bp3-button.bp3-minimal:hover *::before {
+    color: var(--text-color) !important;
+}
 
-.roam-topbar {
-    opacity: 1 !important;
-    background-color: rgba(238, 0, 0, 0) !important;
-    height: 10px;
-    width: 10px;
-    display: inline-block;
-    padding-left: calc(100vw - 275px) !important; /* CRL EDIT */
-    position: absolute !important;
+/* Other Stuff */
+  .bp3-popover {
+    color: var(--color-secondary-contrast) !important;
+}
 
-    left: 0px;
-    transition: none !important;
-    z-index: 1;
+*[class*="bp3-icon"], *[class*="bp3-icon"]::before {
+    color: var(--icon-color) !important;
+}
+
+.roam-highlight {
+    background-color: rgba(var(--color-primary), 0.5);
+}
+
+.rm-block-ref {
+    border-bottom: 2px solid rgba(var(--color-primary), 0.2)
+}
+.rm-block-ref:hover {
+    background-color: rgba(var(--color-primary), 0.2);
+}
+
+.rm-alias-external, .rm-alias-external:hover {
+    color: rgb(var(--color-secondary)) !important;
+      font-weight: bold;
+}
+
+.rm-alias-block, .rm-alias-block:hover {
+    color: rgb(var(--color-primary)) !important;
+    font-weight: bold;
+}
+
+.rm-page-ref, .rm-alias-page, .rm-alias-page:hover {
+    color: rgb(var(--color-primary)) !important;
+    font-weight: bold;
+}
+
+.rm-page-ref-tag {
+    color: var(--color-primary-contrast) !important;
+    background-color: rgb(var(--color-primary));
+    padding: 1px 6px;
+    border-radius: 4px;
+  font-weight: bold;
+}
+  
+.block-highlight-blue {
+    background-color: rgba(var(--color-primary), 0.2)
+}
+
+.starred-pages a {
+    color: rgb(var(--color-primary)) !important;
+}
+
+.version-bullet {
+    background-color: rgb(var(--color-primary)) !important;
+    color: var(--color-primary-contrast) !important;
+}
+
+.roam-bullet-closed {
+    background-color: var(--bullet-color) !important;
+}
+.simple-bullet-inner {
+    background-color: var(--bullet-color) !important;
+}
+
+.rm-saving-icon .rm-synced {
+    background-color: rgb(var(--color-primary));
+}
+.rm-saving-icon .rm-saving-remote {
+    background-color: rgb(var(--color-secondary));
+}
+
+/* set width and other attributes of pages */
+.roam-article {
+    padding: 0 !important;
+    width: var(--page-width) !important;
+}
+.roam-article, #all-pages-search, #roam-right-sidebar-content > * {
+    margin: 50px 0px 100px 0px !important;
+    box-sizing: border-box;
+    height: auto !important;
+    max-width: var(--page-width);
+}
+/* make blocks respect --page-width */
+.roam-block-container {
+    max-width: var(--page-width);
+}
+
+*[style*="background-color: white"] {
+    background-color: var(--page-color) !important;
+}
+*[style*="background-color: rgb(213, 218, 223)"] {
+    background-color: rgba(var(--color-primary), 0.3) !important;
+}
+.rm-reference-item {
+    background-color: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+    font-size: 13px !important;
+}
+
+.rm-ref-page-view-title a {
+    color: #000000;
+    font-weight: strong;
+}  
+
+/* -------------------------- */
+/*      EMBEDDING BLOCKS      */
+/* -------------------------- */
+.rm-embed-container{
+    background-color:var(--page-color) !important;
+}
+    
+/* -------------------------- */
+/*         SEARCH BAR         */
+/* -------------------------- */
+
+#find-or-create-input {
+    opacity: 0;
+    z-index: 10000; /* bring in front of icon to keep clickable */
+    cursor: pointer;
+}
+
+/*#find-or-create-input:active, */#find-or-create-input:focus {
+    opacity: 1;
+    position: fixed;
+    width: 600px;
+    top: 100px;
+    left: calc(50% - 600px / 2);
+    cursor: text;
 }
 
 
-/* TOP RIGHT TOOLBAR ICONS */
-
-.roam-topbar > .flex-h-box {
-    width: 490px; /* CRL EDIT */
-    flex-direction: column; /* CRL EDIT */
-    height: 1px !important;
-    align-items: start !important;
-    /*text-align: center;*/
-
-    position: -webkit-sticky !important;
-    position: sticky !important;
-    left: 0px;
+#find-or-create-input {
+    border-radius: 10px 10px 0px 0px;
+    font-size: 18px;
+    padding: 20px 20px;
 }
-.roam-topbar > .flex-h-box > * {
-    flex: 0 0 15px !important; /* CRL EDIT */
-    margin: auto !important;
-    max-width: 20px !important;
-    max-height: 20px !important;
-}
-.roam-topbar > div >.bp3-button:first-child {
-    align-self: start !important;
-    position: fixed !important;
-    left: 16px;
-    top: 16px; /* CRL EDIT */
-    z-index: 9999999 !important;
-}
-.roam-topbar > div > *:nth-child(2) {
-    margin-top:0px !important; /* CRL EDIT */
-}
-/*#return*/
-.roam-topbar .bp3-icon-calendar {
-  background: var(--body-bg) !important;
-  border: none;
-}
-.roam-topbar .bp3-icon-calendar:hover {
-  background: var(--icon-bg-hover) !important;
+/* if input is empty (no menu) then use all-around border-radius*/
+#find-or-create-input[value=""] {
+    border-radius: 10px;
 }
 
-/* SOME BLACKMAGIC TO GET SEARCH ICON TO FUNCTION LIKE OTHER BUTTONS —AZLEN ELZA */
+/* highlight around search box */
+#find-or-create-input:focus {
+    box-shadow: 0 0 0 1px rgb(var(--color-primary)), 0 0 0 3px rgba(var(--color-primary), 0.3), inset 0 1px 1px rgba(16,22,26, 0.2);
+}
+
+/* styling dropdown menu*/
+.rm-find-or-create-wrapper .bp3-popover {
+    border-radius: 0px 0px 10px 10px;
+    overflow: hidden;
+    background: var(--page-color);
+    backdrop-filter: blur(5px);
+}
+
+/* prevent coloured menu */
+.rm-find-or-create-wrapper .bp3-popover-content, .rm-find-or-create-wrapper .bp3-menu {
+    background-color: transparent !important;
+}
+
+/* properly position search menu overlay */
+.rm-find-or-create-wrapper .bp3-overlay {
+    top: 142px;
+    width: 600px;
+    left: calc(50% - 300px);
+    z-index: 999999;
+}
+
+/* new page text */
+.rm-find-or-create-wrapper .rm-new-page {
+    color: rgb(var(--color-primary)) !important;
+}
+
+/* selected search result */
+.rm-find-or-create-wrapper .rm-menu-item[style*="background"] {
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+/* search results highlighted words */
+.rm-find-or-create-wrapper .rm-menu-item .rm-search-list-item span[style*="yellow"],
+.rm-pages-title-col span[style*="yellow"]{
+    background-color: rgba(var(--color-primary), 0.4) !important;
+    color: var(--text-color);
+}
+
+.bp3-input {
+    background-color: var(--page-color) !important;
+    color: var(--text-color) !important;
+}
+.bp3-input::placeholder {
+    background-color: var(--page-color) !important;
+    color: var(--text-color) !important;
+    opacity: 0.3;
+}
+
+.rm-search-list-item {
+    color: var(--text-color) !important;
+    opacity: 0.6;
+}
+
+  /* SOME BLACKMAGIC TO GET SEARCH ICON TO FUNCTION LIKE OTHER BUTTONS */
 
 .roam-topbar .bp3-icon-search {
     padding: 4px;
@@ -1261,16 +1459,11 @@ blockquote .small, blockquote footer, blockquote small {
 /* hovering search bar in this mode == hovering icon itself */
 /* we must however have the search bar in front of the icon (but invisible) so that it can focus on click */
 /* very hacky :P */
-
 .rm-find-or-create-wrapper[style*="200px"]:hover .bp3-icon-search, .roam-topbar .bp3-icon-search:hover {
-    background-color: var(--icon-bg-hover);
-    color: var(--minirightbar-icon-color) !important;
+    background-color: rgba(var(--color-primary), 0.4);
+    color: var(--text-color) !important;
 }
-.roam-topbar .bp3-icon-search svg {
-    padding: 1px;
-    color: var(--minirightbar-icon-color) !important;
-
-}
+.roam-topbar .bp3-icon-search svg { padding: 1px; }
 /* fix centering on calendar icon */
 .roam-topbar .bp3-icon-calendar { margin: 0 !important }
 
@@ -1284,102 +1477,5 @@ blockquote .small, blockquote footer, blockquote small {
     width: 650px;
 }
 
-/* -------------------------- */
-/*         #SEARCH BAR        */
-/* -------------------------- */
 
-#find-or-create-input { /* search form*/
-    opacity: 0;
-    z-index: 10000; /* bring in front of icon to keep clickable */
-    cursor: pointer;
-    box-shadow: 0 0 0 100VW rgba(15, 15, 15, 0.0); /* CRL EDIT */
-}
-/* change search button size CRL EDIT*/
-#find-or-create-input.bp3-input {
-    padding: 0px 14px;
-}
-/*#find-or-create-input:active, */#find-or-create-input:focus {
-    opacity: 1;
-    position: fixed;
-    width: 600px;
-    top: 100px;
-    left: calc(50% - 600px / 2);
-    cursor: text;
-}
-
-
-#find-or-create-input {
-    border-radius: 3px 3px 0px 0px; /* CRL EDIT */
-    border: 1px solid #c6c6c6; /* CRL EDIT */
-    box-shadow: 0 0 0 100VW rgba(0, 0, 0, .07); /* CRL EDIT */
-    font-size: 18px;
-    padding: 20px 20px;
-    z-index: 10000;
-}
-/* if input is empty (no menu) then use all-around border-radius*/
-#find-or-create-input[value=""] {
-    border-radius: 3px;
-}
-
-/* highlight around search box */
-#find-or-create-input:focus {
-    padding: 25.5px;  /* CRL EDIT */
-}
-
-/* styling dropdown menu*/
-.rm-find-or-create-wrapper .bp3-popover {
-    z-index: 10000;
-    border-radius: 0px 0px 3px 3px;  /* CRL EDIT */
-    border: 1px solid #c6c6c6;   /* CRL EDIT */
-    overflow: hidden;
-    background: white;
-        box-shadow:0px 4px 22px #00000015 !important;  /* CAL ROBERT ADDITION */
-}
-
-/* prevent coloured menu */
-.rm-find-or-create-wrapper .bp3-popover-content, .rm-find-or-create-wrapper .bp3-menu {
-    background-color: transparent !important;
-}
-
-/* properly position search menu overlay */
-.rm-find-or-create-wrapper .bp3-overlay {
-    top: 152px;
-    width: 600px;
-    left: calc(50% + 265px); /* CRL EDIT */
-    z-index: 999999;
-}
-
-/* new page text */
-.rm-find-or-create-wrapper .rm-new-page {
-    color: rgb(var(--left-sidebar-bg)) !important;
-}
-
-/* selected search result */
-.rm-find-or-create-wrapper .rm-menu-item[style*="background"] {
-    background-color: var(--search-selected-row) !important;
-}
-
-/* search results highlighted words */
-.rm-find-or-create-wrapper .rm-menu-item .rm-search-list-item span[style*="yellow"],
-.rm-pages-title-col span[style*="yellow"]{
-    background-color: var(--highlight-background-color) !important;
-    color: var(--main-font-color);
-}
-.bp3-input {
-    background-color: white !important;
-    color: var(--main-font-color) !important;
-}
-.bp3-input::placeholder {
-    background-color: white !important;
-    color: var(--main-font-color) !important;
-    opacity: 0.3;
-}
-.rm-search-list-item {
-    color: var(--main-font-color) !important;
-    opacity: 0.6;
-}
-
-/* HOT FIXES */
-.zoom-path-view .rm-zoom-mask {
-    background-color: #fff0;
 }
