@@ -1,1 +1,280 @@
 /* Catominor Colored Blocks, Quote Blocks, and Sticky Blocks Reference: https://roamresearch.com/#/app/CatoMinor-public/page/Hjcemzax9 */
+/* Block Quotes */
+[data-tags~="bq"] {
+  background-color: rgb(244,242,242);
+  border-left: 5px solid rgb(255,204,111);
+  padding-left: 10px;
+}
+
+[data-tags~="blck:blue"],
+[data-tags-up~="blck-chld:blue"],
+[data-tags-up~="chld:blue"] > div:nth-child(2)
+{
+ 
+  
+ /*	 color: #004085;*/
+    background-color: #cce5ff;
+    /*border-color: #b8daff;*/
+  border: solid 1px #b8daff;
+  /*border-color: #80BDFF;*/
+    margin-bottom: 5px;
+}
+
+[data-tags-up~="sticky"] {
+  position: -webkit-sticky; /* Safari */
+  position: sticky !important;
+  top: 0;
+  z-index: 10;
+}
+
+[data-tags~="blck:grey"],
+[data-tags-up~="blck-chld:grey"],
+[data-tags-up~="chld:grey"] > div:nth-child(2)
+{
+    /* color: #383d41; */
+    background-color: #e2e3e5;
+    border: 1px solid #d6d8db; 
+    margin-bottom: 5px;
+}
+
+[data-tags~="blck:green"],
+[data-tags-up~="blck-chld:green"],
+[data-tags-up~="chld:green"] > div:nth-child(2)
+{
+ 
+  /*   color: #155724; */
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+  
+    margin-bottom: 5px;
+}
+
+[data-tags~="blck:red"],
+[data-tags-up~="blck-chld:red"],
+[data-tags-up~="chld:red"] > div:nth-child(2)
+{
+ 
+  /*   color: #721c24;*/
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+  
+    margin-bottom: 5px;
+}
+
+[data-tags~="blck:yellow"],
+[data-tags-up~="blck-chld:yellow"],
+[data-tags-up~="chld:yellow"] > div:nth-child(2)
+{
+ 
+ /*  color: #856404; */
+    background-color: #fff3cd;
+    
+    border: 1px solid #ffeeba;
+ 
+    margin-bottom: 5px;
+}
+
+/* this code hides all block tags */
+[data-tag^="chld:"],
+[data-tag^="blck-chld:"],
+[data-tag^="blck:"],
+[data-tag^="bq"] {
+display:none;
+}
+
+/* Block Quote Coloring from Cato Minor */
+[data-tags~="bq"] {
+  background-color: rgb(244,242,242);
+  border-left: 5px solid rgb(255,204,111);
+  padding-left: 10px;
+}
+
+[data-tags~="blck:blue"],
+[data-tags-up~="blck-chld:blue"],
+[data-tags-up~="chld:blue"] > div:nth-child(2)
+{
+ 
+  
+ /*	 color: #004085;*/
+    background-color: #cce5ff;
+    /*border-color: #b8daff;*/
+  border: solid 1px #b8daff;
+  /*border-color: #80BDFF;*/
+    margin-bottom: 5px;
+}
+
+[data-tags-up~="sticky"] {
+  position: -webkit-sticky; /* Safari */
+  position: sticky !important;
+  top: 0;
+  z-index: 10;
+}
+
+[data-tags~="blck:grey"],
+[data-tags-up~="blck-chld:grey"],
+[data-tags-up~="chld:grey"] > div:nth-child(2)
+{
+    /* color: #383d41; */
+    background-color: #e2e3e5;
+    border: 1px solid #d6d8db; 
+    margin-bottom: 5px;
+}
+
+[data-tags~="blck:green"],
+[data-tags-up~="blck-chld:green"],
+[data-tags-up~="chld:green"] > div:nth-child(2)
+{
+ 
+  /*   color: #155724; */
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+  
+    margin-bottom: 5px;
+}
+
+[data-tags~="blck:red"],
+[data-tags-up~="blck-chld:red"],
+[data-tags-up~="chld:red"] > div:nth-child(2)
+{
+ 
+  /*   color: #721c24;*/
+    background-color: #f8d7da;
+    border: 1px solid #f5c6cb;
+  
+    margin-bottom: 5px;
+}
+
+[data-tags~="blck:yellow"],
+[data-tags-up~="blck-chld:yellow"],
+[data-tags-up~="chld:yellow"] > div:nth-child(2)
+{
+ 
+ /*  color: #856404; */
+    background-color: #fff3cd;
+    
+    border: 1px solid #ffeeba;
+ 
+    margin-bottom: 5px;
+}
+
+/* this code hides all block tags */
+[data-tag^="chld:"],
+[data-tag^="blck-chld:"],
+[data-tag^="blck:"],
+[data-tag^="bq"] {
+display:none;
+}
+
+/* Minimal Queries */
+/* RR change: MINIMIZE QUERIES: add any one of the following tags before the beginning of your query (in the same block):
+    #min-title = hides the page reference link / page title
+    #min-con = hides the contextual reference information (breadcrumbs)
+    #minimal = hides both the title and the context
+    #min-q = hides the query string, similar to legacy behavior
+    #min-all = hides everything — title, context, and query string
+inspired by Matt Goldenberg */
+[data-tag="minimal"], 
+[data-tag="minimal"] + .rm-query .rm-title-arrow-wrapper,
+[data-tag="minimal"] + .rm-query .zoom-mentions-view {
+  display:none!important; /* hide page reference (title) and mention context (breadcrumbs) */
+}
+[data-tag="min-title"], [data-tag="min-title"] + .rm-query .rm-title-arrow-wrapper {
+display:none!important; /* hide page reference (title) */
+}
+[data-tag="min-con"],
+[data-tag="min-con"] + .rm-query .zoom-mentions-view,
+[data-tag="min-con"] + .rm-query .rm-query-title {
+  display:none !important;  /* hide mention context (breadcrumbs) */
+}
+[data-tag="min-q"], 
+[data-tag="min-q"] + .rm-query .rm-query-title {
+  display:none !important;  /* hide the query string */
+}
+[data-tag="min-all"], 
+[data-tag="min-all"] + .rm-query .zoom-mentions-view,
+[data-tag="min-all"] + .rm-query .rm-title-arrow-wrapper,
+[data-tag="min-all"] + .rm-query .rm-query-title {
+  display:none !important;  /* hide everything */
+}
+[data-tag="minimal"] + .rm-query .rm-query-title::after,
+[data-tag="min-title"] + .rm-query .rm-query-title::after,
+[data-tag="min-con"] + .rm-query .rm-query-title::after{
+  content: " #minimal" /* add a tag to the query string to indicate this query has been minimized */
+}
+
+/* Edit Icons for Hard to Click Items */
+/* Edit Icons For Hard To Click Items */
+.roam-block > span > div:not(.rm-block-ref):not(.rm-query):after{
+    content: url(#)"🖊";
+    opacity: .5;
+    padding-left:4px;
+    padding-top:1px;
+    height:25px;
+    width:25px;
+    color:white;
+    border-radius:50%;
+    display:inline-block;
+    cursor: pointer;
+    transition-duration: 500ms;
+}
+.roam-block > span > div:not(.rm-block-ref):not(.rm-query):hover:after{
+    opacity: 1;
+    background-color: #d2d0cf24;
+}
+
+/* CSS Theme Colors Not Added Yet */
+
+/* Add Separators to Left Side Menu */
+/* Separators in the sidebar */
+.starred-pages a:nth-child(4):after,
+.starred-pages a:nth-child(7):after {
+  content: '──────';
+  color: rgba(255,253,253,0.56);
+}
+
+/* Bullets 12/3/2020 Not Added Yet */
+
+/* Atrribute Table and Sorting Not Added Yet */
+
+
+/* Override PDF and Image embed dimensions from [[Abhay]] */
+/* Override PDF, iframe and image embed dimensions */
+
+div[style*="width: 580px;"],
+div[style*="width: 720px;"] {
+  width: 100% !important;
+}
+div[style*="height: 720px;"] {
+  height: 85vh !important;
+}
+
+/* Edit Default Roam Block Quote Not Added Yet */
+/* Edit Default hr Divider Not Added Yet */
+/* Scrollbar On or Off Not Added Yet */
+
+/* Change Space Between Headings */
+    /* less space below page heading */
+    .roam-body .roam-app .roam-main .roam-article .rm-title-display {
+        margin-bottom: 8px;
+    }
+    
+/* Hide Shortcuts Title */
+/* don't need "SHORTCUTS" heading */
+
+.starred-pages-wrapper .flex-h-box {
+  display: none;
+}
+
+.starred-pages-wrapper > div:first-child {
+  margin: 0 -18px;
+}
+
+/* Subtle Logo */
+/* more subtle logo */
+
+#roam-sidebar-logo img {
+  opacity: 0.4;
+}
+#roam-sidebar-logo span {
+  display: none;
+}
