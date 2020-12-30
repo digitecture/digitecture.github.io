@@ -308,7 +308,7 @@ div.roam-center > div:first-child {
 /* -------------------------- */
 
 /* INTERNAL PAGE LINK color */
-.rm-page-ref--link-color {
+.rm-page-ref--link {
     color: var(--page--link-color);
 }
 
@@ -318,8 +318,8 @@ div.roam-center > div:first-child {
 }
 
 /* internal link hover state */
-.rm-page-ref--link-color:focus,
-.rm-page-ref--link-color:hover {
+.rm-page-ref--link:focus,
+.rm-page-ref--link:hover {
     color: var(--page--link-color);
     text-decoration: none; /* EXPERIMENTING WITH HOVER STATE */
 }
@@ -448,7 +448,7 @@ span.bp3-icon-small.bp3-icon-star {
     padding: var(--highlight-padding);
 }
 /* INTERNAL PAGE LINK TEXT COLOR */
-.rm-highlight .rm-page-ref--link-color {
+.rm-highlight .rm-page-ref--link {
   color: var(--highlight-link-color);
 }
 /* BLOCK SELECTION HIGHLIGHTING */
@@ -1200,14 +1200,14 @@ blockquote .small, blockquote footer, blockquote small {
 /* -------------------------- */
 
 /* INTERNAL PAGE LINK color */
-.rm-page-ref--link-color {
+.rm-page-ref--link {
     color: var(--page-link-color);
     font-weight: bold;
 }
 
 /* internal link hover state */
-.rm-page-ref--link-color:focus,
-.rm-page-ref--link-color:hover {
+.rm-page-ref--link:focus,
+.rm-page-ref--link:hover {
     color: var(--page-link-color);
     text-decoration: none; /* EXPERIMENTING WITH HOVER STATE */
 }
