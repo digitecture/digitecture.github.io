@@ -441,14 +441,14 @@ span.bp3-icon-small.bp3-icon-star {
 /* ------------------------------- */
 
 /* text highlighting */
-.roam-highlight {
+.rm-highlight {
     background-color: var(--highlight-background-color);
     color: var(--highlight-font-color);
     border-radius: 0px;
     padding: var(--highlight-padding);
 }
 /* INTERNAL PAGE LINK TEXT COLOR */
-.roam-highlight .rm-page-ref-link-color {
+.rm-highlight .rm-page-ref--link-color {
   color: var(--highlight-link-color);
 }
 /* BLOCK SELECTION HIGHLIGHTING */
@@ -469,7 +469,7 @@ span.bp3-icon-small.bp3-icon-star {
 /* ------------------------- */
 
 /* TAG */
-.rm-page-ref-tag {
+.rm-page-ref--tag {
   color:  var(--tag-font-color )!important;
   font-weight: 400;
   background-color: var(--tag-bg-color);
@@ -478,7 +478,7 @@ span.bp3-icon-small.bp3-icon-star {
   padding: var(--tag-padding);
 }
 /* TAG HOVER */
-.rm-page-ref-tag:hover {
+.rm-page-ref--tag:hover {
   color: var(--tagHover-font-color) !important;
   font-weight: 400;
   background-color: var(--tagHover-bg-color);
@@ -1200,19 +1200,19 @@ blockquote .small, blockquote footer, blockquote small {
 /* -------------------------- */
 
 /* INTERNAL PAGE LINK color */
-.rm-page-ref-link-color {
+.rm-page-ref--link-color {
     color: var(--page-link-color);
     font-weight: bold;
 }
 
 /* internal link hover state */
-.rm-page-ref-link-color:focus,
-.rm-page-ref-link-color:hover {
+.rm-page-ref--link-color:focus,
+.rm-page-ref--link-color:hover {
     color: var(--page-link-color);
     text-decoration: none; /* EXPERIMENTING WITH HOVER STATE */
 }
 /* BRACKETS COLOR */
-.rm-page-ref-brackets {
+.rm-page-ref__brackets {
     color: var(--page-bracket-color);
 }
 /* EXTERNAL LINK color */
@@ -1256,7 +1256,7 @@ blockquote .small, blockquote footer, blockquote small {
     color: var(--icon-color) !important;
 }
 
-.roam-highlight {
+.rm-highlight {
     background-color: rgba(var(--color-primary), 0.5);
 }
 
@@ -1267,22 +1267,22 @@ blockquote .small, blockquote footer, blockquote small {
     background-color: rgba(var(--color-primary), 0.2);
 }
 
-.rm-alias-external, .rm-alias-external:hover {
+.rm-alias--external, .rm-alias--external:hover {
     color: rgb(var(--color-secondary)) !important;
       font-weight: bold;
 }
 
-.rm-alias-block, .rm-alias-block:hover {
+.rm-alias--block, .rm-alias--block:hover {
     color: rgb(var(--color-primary)) !important;
     font-weight: bold;
 }
 
-.rm-page-ref, .rm-alias-page, .rm-alias-page:hover {
+.rm-page-ref, .rm-alias--page, .rm-alias--page:hover {
     color: rgb(var(--color-primary)) !important;
     font-weight: bold;
 }
 
-.rm-page-ref-tag {
+.rm-page-ref--tag {
     color: var(--color-primary-contrast) !important;
     background-color: rgb(var(--color-primary));
     padding: 1px 6px;
