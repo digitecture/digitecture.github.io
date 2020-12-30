@@ -308,8 +308,8 @@ div.roam-center > div:first-child {
 /* -------------------------- */
 
 /* INTERNAL PAGE LINK color */
-.rm-page-ref-link-color {
-    color: var(--page-link-color);
+.rm-page-ref--link-color {
+    color: var(--page--link-color);
 }
 
 /* Checkmark Shape from Box to Rounded */
@@ -318,13 +318,13 @@ div.roam-center > div:first-child {
 }
 
 /* internal link hover state */
-.rm-page-ref-link-color:focus,
-.rm-page-ref-link-color:hover {
-    color: var(--page-link-color);
+.rm-page-ref--link-color:focus,
+.rm-page-ref--link-color:hover {
+    color: var(--page--link-color);
     text-decoration: none; /* EXPERIMENTING WITH HOVER STATE */
 }
 /* BRACKETS COLOR */
-.rm-page-ref-brackets {
+.rm-page-ref__brackets {
     color: var(--page-bracket-color);
 }
 /* EXTERNAL LINK color */
